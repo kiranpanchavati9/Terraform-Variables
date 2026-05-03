@@ -13,3 +13,32 @@ variable "components" {
     "splunk-searchhead"]
 }
 
+variable "ports" {
+  default = [
+    "9997",
+    "8089",
+    "8000",
+    "8088",
+    "443",
+    "8080"]
+}
+
+variable "cidripv4" {
+  default = "0.0.0.0/0"
+}
+
+variable "protocol" {
+  default = "tcp"
+}
+
+variable "securitygroupid" {
+  default = "sg-0fcfe62979bdd0bf1"
+}
+
+
+variable "vpcid" {
+  default = "vpc-03106aa780f4a0053"
+}
+
+
+
