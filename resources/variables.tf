@@ -31,11 +31,6 @@ variable "protocol" {
   default = "tcp"
 }
 
-variable "securitygroupid" {
-  default = "sg-0fcfe62979bdd0bf1"
-}
-
-
 variable "vpcid" {
   default = "vpc-03106aa780f4a0053"
 }

@@ -21,7 +21,7 @@ resource "aws_security_group" "allow_splunk_firewall_rules" {
 resource "aws_vpc_security_group_ingress_rule" "splunk" {
   for_each = toset(var.ports)
 
-  security_group_id = var.securitygroupid
+  security_group_id = aws_security_group.allow_splunk_firewall_rules.id
   cidr_ipv4         = var.cidripv4
   from_port         = tonumber(each.value)
   ip_protocol       = var.protocol
